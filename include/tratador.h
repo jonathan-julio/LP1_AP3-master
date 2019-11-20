@@ -21,7 +21,7 @@ class Tratador:public Funcionario{
 	public: 	
 
 		int getNivel_seguranca();		 	
-		void getNivel_seguranca();		 
+		void setNivel_seguranca();		 
 
 };
 

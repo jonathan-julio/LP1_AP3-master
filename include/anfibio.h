@@ -9,7 +9,7 @@
 #include <iterator>
 #include <algorithm>
 
-
+#include "animal.h"
 
 using namespace std;
 
@@ -24,8 +24,8 @@ class Anfibio:public Animal{
 		int getTotal_de_mudas();		 
 		string getUltima_muda();
 		
-		void setTotal_de_mudas();		 
-		void setUltima_muda();
+		void setTotal_de_mudas(int totalMudas);		 
+		void setUltima_muda(string ultimaMuda);
 };
 
 

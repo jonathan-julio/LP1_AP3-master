@@ -35,13 +35,13 @@ class Funcionario{
 		char getFator_rh();
 		string getEspecialidade();
 		
-		void setId_funario();		 
-		void setNome_funcionario();
-		void setCpf();
-		void setIdade_funcionario();
-		void setTipo_sanguineo();
-		void setFator_rh();
-		void setEspecialidade();
+		void setId_funario(int id_f);		 
+		void setNome_funcionario(string nome_f);
+		void setCpf(string cpf_f);
+		void setIdade_funcionario(short idade_f);
+		void setTipo_sanguineo(short tipo_s);
+		void setFator_rh(char RH);
+		void setEspecialidade(string especialidade_f);
 };
 
 

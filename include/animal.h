@@ -21,8 +21,7 @@ class Animal{
 		char sexo;
 		double tamanho;
 		string dieta;
-		Veterinario veterinario;
-		Tratador tratador;
+		int idFuncionario;
 		string nome_batismo;
 
 //Getters e Setters
@@ -34,20 +33,18 @@ class Animal{
 		char getSexo();
 		double getTamnho();
 		string getDieta();
-		Veterinario getVeterinario();
-		Tratador getTratador();
+		int getIdFuncionario();
 		string getNome_batismo();
 
 		
-		void setId_animal();		 
-		void setClasse();
-		void setNome_cientifico();
-		void setSexo();
-		void setTamnho();
-		void setDieta();
-		void setVeterinario();
-		void setTratador();
-		void setNome_batismo();
+		void setId_animal(int id_a);		 
+		void setClasse(string classe_a);
+		void setNome_cientifico( string nome_c);
+		void setSexo(char s);
+		void setTamanho(double tamanho_a);
+		void setDieta(string dieta_a);
+		void setIdFuncionario(int id_f);
+		void setNome_batismo(string nome_b);
 
 	
 };

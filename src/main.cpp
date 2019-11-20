@@ -4,18 +4,15 @@
 #include <string>
 #include <iterator>
 #include <algorithm>
-#include "veterinário.h"
+#include "veterinario.h"
 #include "tratador.h"
 
+#include "gerenciar.h"
 using namespace std;
 
+gerenciar feira;
 
 int main (int argc, char const *argv[]){
-	vector <veterinario *> listaVeterinario;
-	vector <int *> idVeterinario;
-	vector <int *> idTratador;
-	vector <int *> idFuncionario;
-	vector <tratador *> listaTratador;
 
 	int opcao = -1;
 	int opcao2 = 0;
@@ -36,45 +33,7 @@ int main (int argc, char const *argv[]){
 
 		switch (opcao){
 			case 1:
-				int 
-				cout<< "deseja cadastrar: \nVeterinário ----- 1.\nTratador -------- 2. " << endl;
-				cin >> opcao2;
-				if (opcao2 == 1 ){
-					int id;
-					string nome_funcionario, cpf,especialidade,crmv;
-					short idade_funcionario, tipo_sanguineo, fator_rh;
-					int status = 0;
-					cout<< "Id do funcionario:" << endl;
-					cin >> id;
-					cout<< "Nome do funcionario:" << endl;
-					cin >> nome_funcionario;
-					cout<< "CPF do funcionario:" << endl;
-					cin >> cpf;
-					cout<< "Especialidade do funcionario:" << endl;
-					cin >> especialidade;
-					cout<< "Crmv do funcionario:" << endl;
-					cin >> crmv;
-					cout<< "Idade do funcionario:" << endl;
-					cin >> idade_funcionario;
-					cout<< "Tipo sanguineo do funcionario:" << endl;
-					cin >> tipo_sanguineo;
-					cout<< "Fator RH do funcionario:" << endl;
-					cin >> fator_rh;
-					for (vector<int*>::iterator it = idFuncionario.begin(); it != idFuncionario.end(); ++it){
-						if ((**it) == id){
-							cout << endl << "ID ja cadastrado. Operacao CANCELADA!" << endl;
-							status = 1;
-						}
-					}
-					if (status == 0 ){
-						Veterinario *novoVeterinario = new Veterinario(int id,string nome_funcionario,string cpf,short idade_funcionario,short tipo_sanguineo,char fator_rh,string especialidade,string crmv);
-						listaVeterinario.push_back(novoVeterinario);
-						idFuncionario.push_back(id);
-						idVeterinario.push_back(id);
-					}
-
-				}
-				
+				feira.addAnimal();
 				break;					
 			case 2: 
 					
@@ -89,7 +48,7 @@ int main (int argc, char const *argv[]){
 					
 				break;
 			case 6:
-					
+				feira.addFuncionario();
 				break;
 			case 0:
 					cout<<endl<< "Ate mais!" << endl;

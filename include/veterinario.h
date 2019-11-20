@@ -9,20 +9,21 @@
 #include <iterator>
 #include <algorithm>
 
-
+#include "funcionario.h"
 
 using namespace std;
 
-class Veterinario:public Funcionario{
-	protected:
+class Veterinario : public Funcionario{
+	private:
 		string crmv;
 
 //Getters e Setters
 	public: 	
-		Veterinario(int id_funario,string nome_funcionario,string cpf,short idade_funcionario,short tipo_sanguineo,char fator_rh,string especialidade,string crmv);
+	
+		Veterinario(int id_funario,string nome_funcionario,string cpf,short idade_funcionario,short tipo_sanguineo,char fator_rh,string especialidade,string crmv_a);
 		~Veterinario();
 		string getCrmv();		 	
-		void setCrmv();		 
+		void setCrmv(string crmv_a);		 
 
 };
 
