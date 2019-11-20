@@ -19,7 +19,8 @@ class Veterinario:public Funcionario{
 
 //Getters e Setters
 	public: 	
-
+		Veterinario(int id_funario,string nome_funcionario,string cpf,short idade_funcionario,short tipo_sanguineo,char fator_rh,string especialidade,string crmv);
+		~Veterinario();
 		string getCrmv();		 	
 		void setCrmv();		 
 

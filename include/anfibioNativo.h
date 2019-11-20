@@ -17,7 +17,7 @@ class Anfibio_nativo:public Anfibio{
 
 	public: 		
 		Anfibio_nativo();
-		Anfibio_nativo(int id,string classe,string nome_c,char sexo,double tamanho, string dieta, Veterinario vet, Tratador tra, string nome_B, int total_mudas, string ultima_muda);
+		Anfibio_nativo(int id,string classe,string nome_c,char sexo,double tamanho, string dieta, int funcionario,  string nome_B, int total_mudas, string ultima_muda);
 		~Anfibio_nativo();
 };
 
