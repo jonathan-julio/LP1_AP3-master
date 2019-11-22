@@ -8,12 +8,15 @@
 
 #include "gerenciar.h"
 #include "animal.h"
-#include "anfibio.h"
-#include "anfibioNativo.h"
+#include "reptil.h"
+#include "reptilNativo.h"
+#include "animalNativo.h"
+#include "animalSilvestre.h"
+
 
 using namespace std;
 
-Anfibio_nativo::Anfibio_nativo(){
+Reptil_nativo::Reptil_nativo(){
 	setId_animal(0);		 
 	setClasse("");
 	setNome_cientifico("");
@@ -22,13 +25,13 @@ Anfibio_nativo::Anfibio_nativo(){
 	setDieta("");
 	setIdFuncionario(0);
 	setNome_batismo("");
-	setTotal_de_mudas(0);		 
-	setUltima_muda("");
-	setAutorizacao_ibama("");
-	//++numeroCarros;
+	setVenenoso(false);
+    setTipo_veneno("");
+	setAutorizacao("");
+		
 }
 
-Anfibio_nativo::Anfibio_nativo(int id_a,string classe,string nome_c,char sexo,double tamanho, string dieta, int funcionario,  string nome_B, int total_mudas, string ultima_muda, string autorizacaoIbama){
+Reptil_nativo::Reptil_nativo(int id_a,string classe,string nome_c,char sexo,double tamanho, string dieta, int funcionario,  string nome_B, bool ven, string tipoVeneno, string autorizacaoIbama){
 	setId_animal(id_a);		 
 	setClasse(classe);
 	setNome_cientifico(nome_c);
@@ -37,18 +40,18 @@ Anfibio_nativo::Anfibio_nativo(int id_a,string classe,string nome_c,char sexo,do
 	setDieta(dieta);
 	setIdFuncionario(funcionario);
 	setNome_batismo(nome_B);
-	setTotal_de_mudas(total_mudas);		 
-	setUltima_muda(ultima_muda);
-	setAutorizacao_ibama(autorizacaoIbama);
+	setVenenoso(venenoso);
+    setTipo_veneno(tipoVeneno);
+	setAutorizacao(autorizacaoIbama);
 }
 
 
-Anfibio_nativo::~Anfibio_nativo(){
+Reptil_nativo::~Reptil_nativo(){
 
 }
 
-ostream& operator<< (ostream &o, Anfibio_nativo &animal_){
-	o << "*********Anfibio nativo**********" << endl
+ostream& operator<< (ostream &o, Reptil_nativo &animal_){
+	o << "*********Reptil nativo**********" << endl
 	  << "> ID animal........... " << animal_.getId_animal() << endl
 	  << "> Classe.............. " << animal_.getClasse() << endl
 	  << "> Nome cientifico..... " << animal_.getNome_cientifico() << endl
@@ -57,8 +60,8 @@ ostream& operator<< (ostream &o, Anfibio_nativo &animal_){
 	  << "> Dieta............... " << animal_.getDieta() <<  endl
 	  << "> ID funcionario...... " << animal_.getIdFuncionario() << endl
 	  << "> Nome de batismo..... " << animal_.getNome_batismo() << endl
-	  << "> Total de mudas...... " << animal_.getTotal_de_mudas() << endl
-	  << "> Ultima muda......... " << animal_.getUltima_muda() << endl
-	  << "> Autorização IBAMA... " << animal_.getAutorizacao_ibama() << endl;
+	  << "> venenoso............ " << animal_.getVenenoso() << endl
+      << "> Tipo do veneno...... " << animal_.getTipo_veneno() << endl
+	  << "> Autorização IBAMA... " << animal_.getAutorizacao() << endl;
 	return o;
 }

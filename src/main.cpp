@@ -15,6 +15,7 @@ gerenciar feira;
 int main (int argc, char const *argv[]){
 	//g++ -o exe main.cpp anfibioNativo.cpp animal.cpp funcionario.cpp gerenciar.cpp veterinario.cpp anfibio.cpp
 	int opcao = -1;
+	int opcao2 = 0;
 	while (opcao!= 0){
 		cout << endl << "++++++++++++++++++++++++++++++++"<<endl
 		<< endl << "Escolha a opcao desejada"<<endl	

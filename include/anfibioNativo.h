@@ -11,14 +11,16 @@
 
 #include "animal.h"
 #include "anfibio.h"
+#include "animalNativo.h"
+#include "animalSilvestre.h"
 
 using namespace std;
 
-class Anfibio_nativo:public Anfibio{
+class Anfibio_nativo:public Anfibio, public Animal_nativo{
 
 	public: 		
 		Anfibio_nativo();
-		Anfibio_nativo(int id_a,string classe,string nome_c,char sexo,double tamanho, string dieta, int funcionario,  string nome_B, int total_mudas, string ultima_muda);
+		Anfibio_nativo(int id_a,string classe,string nome_c,char sexo,double tamanho, string dieta, int funcionario,  string nome_B, int total_mudas, string ultima_muda, string autorizacaoIbama);
 		~Anfibio_nativo();
 
 		friend ostream& operator << (ostream &o, Anfibio_nativo &animal_);

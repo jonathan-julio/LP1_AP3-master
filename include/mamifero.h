@@ -1,6 +1,6 @@
 #define _GLIBCXX_USE_CXX11_ABI 0
-#ifndef TRATADOR_H
-#define TRATADOR_H
+#ifndef MAMIFERO_H
+#define MAMIFERO_H
 
 #include <iostream>
 #include <vector>
@@ -9,21 +9,21 @@
 #include <iterator>
 #include <algorithm>
 
-
+#include "animal.h"
 
 using namespace std;
 
-class Tratador:public Funcionario{
+class Mamifero:public Animal{
 	protected:
-		int nivel_seguranca;
+		string cor_pelo;
 
 //Getters e Setters
 	public: 	
-
-		int getNivel_seguranca();		 	
-		void setNivel_seguranca();		 
-
+	 
+		string getCor_pelo();
+		 
+		void setCor_pelo(string corPelo);
 };
 
 
-#endif // TRATADOR_H
+#endif // MAMIFERO_H
