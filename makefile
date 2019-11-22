@@ -3,41 +3,45 @@
 CPPFLAGS = -Wall -std=c++11 #flags
 
 #executavel
-AP2: veiculo.o moto.o caminhao.o automovel.o gerenciar.o concessionaria.o mainAP.o 
-	@$(CC) $(CPPFLAGS) -Iinclude veiculo.o moto.o caminhao.o automovel.o gerenciar.o concessionaria.o mainAP.o  -o AP2											
+AP3: funcionario.o veterinario.o animal.o anfibio.o anfibioNativo.o gerenciar.o  main.o 
+	@$(CC) $(CPPFLAGS) -Iinclude funcionario.o veterinario.o animal.o anfibio.o anfibioNativo.o gerenciar.o main.o  -o AP3											
 		
 	@mv *.o build/ #enviando os .o para pasta objects
-	
+#main.cpp anfibioNativo.cpp 
+
 # o -I include diz que a biblioteca está nessa pasta
 
-veiculo.o: src/veiculo.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/veiculo.cpp
-	@echo "Instalando veiculo..."
+funcionario.o: src/funcionario.cpp 
+	@clear
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/funcionario.cpp
+	@echo "Instalando funcionarios..."
 
-moto.o: src/moto.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/moto.cpp
-	@echo "Instalando moto..."
+veterinario.o: src/veterinario.cpp
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/veterinario.cpp
+	@echo "Instalando veterinario..."
 
-caminhao.o: src/caminhao.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/caminhao.cpp
-	@echo "Instalando caminhao..."
+animal.o: src/animal.cpp
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/animal.cpp
+	@echo "Instalando animal..."
 
-automovel.o: src/automovel.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/automovel.cpp
-	@echo "Instalando automovel..."
-
+anfibio.o: src/anfibio.cpp
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/anfibio.cpp
+	@echo "Instalando anfibio..."
+	
+anfibioNativo.o: src/anfibioNativo.cpp
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/anfibioNativo.cpp
+	@echo "Instalando Anfibio nativo..."
+	
 gerenciar.o: src/gerenciar.cpp
 	@$(CC) $(CPPFLAGS) -c -Iinclude src/gerenciar.cpp
 	@echo "Instalando gerenciar..."
 
-concessionaria.o: src/concessionaria.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/concessionaria.cpp
-	@echo "Instalando concessionaria..."
 
-mainAP.o: src/mainAP.cpp
-	@$(CC) $(CPPFLAGS) -c -Iinclude src/mainAP.cpp
+
+main.o: src/main.cpp
+	@$(CC) $(CPPFLAGS) -c -Iinclude src/main.cpp
 	@echo "Aguarde..."
-	@echo "Pronto!!!\nPara mais informações digite o comando --> ./AP2\n"
-clean:
-	@rm -rf AP2
+	@echo "Pronto!!!\nPara mais informações digite o comando --> ./AP3\n"
+clear:
+	@rm -rf AP3
 	@echo "Diretorio limpo"
